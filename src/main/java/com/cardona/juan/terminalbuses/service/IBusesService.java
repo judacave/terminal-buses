@@ -1,6 +1,6 @@
 package com.cardona.juan.terminalbuses.service;
 
-import com.cardona.juan.terminalbuses.repository.models.Bus;
+import com.cardona.juan.terminalbuses.repository.skeletons.Bus;
 
 import java.util.List;
 

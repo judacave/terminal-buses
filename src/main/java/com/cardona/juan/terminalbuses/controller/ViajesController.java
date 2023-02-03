@@ -22,7 +22,7 @@ public class ViajesController {
 
     @PostMapping("/{placa}/{id}")
     public ResponseEntity POSTcrearViaje(@PathVariable("placa")String placa,@PathVariable("id") String id) {
-        viajesService.asignarParametrosViaje(placa,id);
-        return new ResponseEntity(viajesService.obtenerViajes(), HttpStatus.CREATED);
+
+        return new ResponseEntity(viajesService.asignarParametrosViaje(placa,id), HttpStatus.CREATED);
     }
 }

@@ -1,7 +1,7 @@
 package com.cardona.juan.terminalbuses.service;
 
 import com.cardona.juan.terminalbuses.repository.BusRepository;
-import com.cardona.juan.terminalbuses.repository.models.Bus;
+import com.cardona.juan.terminalbuses.repository.skeletons.Bus;
 import com.cardona.juan.terminalbuses.repository.models.BusGrande;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

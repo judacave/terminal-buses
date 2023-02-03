@@ -1,4 +1,4 @@
-package com.cardona.juan.terminalbuses.repository.models;
+package com.cardona.juan.terminalbuses.repository.skeletons;
 
 import java.util.ArrayList;
 import java.util.List;

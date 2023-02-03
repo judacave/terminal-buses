@@ -1,6 +1,5 @@
 package com.cardona.juan.terminalbuses.repository;
 
-import com.cardona.juan.terminalbuses.repository.models.Bus;
 import com.cardona.juan.terminalbuses.repository.models.Viaje;
 import org.springframework.stereotype.Repository;
 

@@ -1,5 +1,6 @@
 package com.cardona.juan.terminalbuses.repository;
 
+
 import com.cardona.juan.terminalbuses.repository.models.Pasajero;
 import org.springframework.stereotype.Repository;
 
@@ -8,6 +9,7 @@ import java.util.List;
 @Repository
 public class PasajerosRepository {
 
+
     private List<Pasajero> pasajeros1;
 
     public PasajerosRepository() {
@@ -15,7 +17,8 @@ public class PasajerosRepository {
                 new Pasajero(2, "Alejandra"),
                 new Pasajero(3, "Julian"),
                 new Pasajero(4, "Mariana"),
-                new Pasajero(5, "Valeria")));
+                new Pasajero(5, "Valeria"),
+                new Pasajero(6,"Stiven")));
     }
 
 

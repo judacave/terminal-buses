@@ -4,14 +4,12 @@ import com.cardona.juan.terminalbuses.repository.BusRepository;
 import com.cardona.juan.terminalbuses.repository.DestinosRepository;
 import com.cardona.juan.terminalbuses.repository.PasajerosRepository;
 import com.cardona.juan.terminalbuses.repository.ViajesRepository;
-import com.cardona.juan.terminalbuses.repository.models.Bus;
-import com.cardona.juan.terminalbuses.repository.models.BusGrande;
+import com.cardona.juan.terminalbuses.repository.skeletons.Bus;
 import com.cardona.juan.terminalbuses.repository.models.Destino;
 import com.cardona.juan.terminalbuses.repository.models.Viaje;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -40,15 +38,18 @@ public class ViajesService implements IViajesService{
     }
 
     @Override
-    public void asignarParametrosViaje(String placa, String id) {
+    public Viaje asignarParametrosViaje(String placa, String id) {
         List<Bus> busasignado = buses.obtenerBuses().stream().filter(bus -> bus.getPlaca().equals(placa)).collect(Collectors.toList());
         List<Destino> destinoSeleccionado = destinos.getDestinos().stream().filter(d -> d.getId().equals(id)).collect(Collectors.toList());
         if(pasajeros.getPasajeros1().size() <= busasignado.get(0).getCapacidad()){
-            crearViaje(new Viaje(UUID.randomUUID().toString(),new Date().toString(),busasignado.get(0),destinoSeleccionado.get(0),pasajeros.getPasajeros1()));
+            Viaje aux = crearViaje(new Viaje(UUID.randomUUID().toString(),new Date().toString(),busasignado.get(0),destinoSeleccionado.get(0),pasajeros.getPasajeros1()));
             int newCapacidad = busasignado.get(0).getCapacidad() - pasajeros.getPasajeros1().size();
             busasignado.get(0).setCapacidad(newCapacidad);
+            return  aux;
         }else{
+            Viaje aux2 = new Viaje();
             System.out.println("Se excedio la capacidad de pasajeros para este bus");
+            return aux2;
         }
 
     }

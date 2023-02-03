@@ -1,5 +1,7 @@
 package com.cardona.juan.terminalbuses.repository.models;
 
+import com.cardona.juan.terminalbuses.repository.skeletons.Bus;
+
 import java.util.List;
 
 public class Viaje {
@@ -15,6 +17,9 @@ public class Viaje {
         this.bus = bus;
         this.destino = destino;
         this.pasajeros = pasajeros;
+    }
+
+    public Viaje() {
     }
 
     public String getId() {

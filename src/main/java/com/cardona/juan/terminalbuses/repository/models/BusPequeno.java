@@ -1,6 +1,6 @@
 package com.cardona.juan.terminalbuses.repository.models;
 
-import com.cardona.juan.terminalbuses.repository.models.Bus;
+import com.cardona.juan.terminalbuses.repository.skeletons.Bus;
 
 public class BusPequeno extends Bus {
     public BusPequeno(String placa, String empresa, int capacidad) {

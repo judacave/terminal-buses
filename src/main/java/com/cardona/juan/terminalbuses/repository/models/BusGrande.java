@@ -1,6 +1,6 @@
 package com.cardona.juan.terminalbuses.repository.models;
 
-import com.cardona.juan.terminalbuses.repository.models.Bus;
+import com.cardona.juan.terminalbuses.repository.skeletons.Bus;
 
 public class BusGrande extends Bus {
 

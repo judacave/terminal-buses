@@ -1,9 +1,7 @@
 package com.cardona.juan.terminalbuses.controller;
 
-import com.cardona.juan.terminalbuses.repository.models.Bus;
 import com.cardona.juan.terminalbuses.repository.models.BusGrande;
 import com.cardona.juan.terminalbuses.service.IBusesService;
-import com.cardona.juan.terminalbuses.service.IDestinosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

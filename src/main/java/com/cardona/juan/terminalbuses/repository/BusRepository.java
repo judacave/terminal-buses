@@ -1,6 +1,6 @@
 package com.cardona.juan.terminalbuses.repository;
 
-import com.cardona.juan.terminalbuses.repository.models.Bus;
+import com.cardona.juan.terminalbuses.repository.skeletons.Bus;
 import com.cardona.juan.terminalbuses.repository.models.BusGrande;
 import org.springframework.stereotype.Repository;
 
@@ -13,7 +13,7 @@ public class BusRepository {
 
     public BusRepository() {
             Bus b1 = new BusGrande("B1","Bolivariano",10);
-            Bus b2 = new BusGrande("B2","Flota Occidental",8);
+            Bus b2 = new BusGrande("B2","Flota Occidental",7);
             Bus b3 = new BusGrande("B3","Velotax",8);
         buses = new ArrayList<>(List.of(b1,b2,b3));
     }
