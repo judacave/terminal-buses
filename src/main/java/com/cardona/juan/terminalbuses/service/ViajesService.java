@@ -12,7 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -41,7 +43,14 @@ public class ViajesService implements IViajesService{
     public void asignarParametrosViaje(String placa, String id) {
         List<Bus> busasignado = buses.obtenerBuses().stream().filter(bus -> bus.getPlaca().equals(placa)).collect(Collectors.toList());
         List<Destino> destinoSeleccionado = destinos.getDestinos().stream().filter(d -> d.getId().equals(id)).collect(Collectors.toList());
-        crearViaje(new Viaje("V1","12/10/22",busasignado.get(0),destinoSeleccionado.get(0),pasajeros.getPasajeros1()));
+        if(pasajeros.getPasajeros1().size() <= busasignado.get(0).getCapacidad()){
+            crearViaje(new Viaje(UUID.randomUUID().toString(),new Date().toString(),busasignado.get(0),destinoSeleccionado.get(0),pasajeros.getPasajeros1()));
+            int newCapacidad = busasignado.get(0).getCapacidad() - pasajeros.getPasajeros1().size();
+            busasignado.get(0).setCapacidad(newCapacidad);
+        }else{
+            System.out.println("Se excedio la capacidad de pasajeros para este bus");
+        }
+
     }
 }
 

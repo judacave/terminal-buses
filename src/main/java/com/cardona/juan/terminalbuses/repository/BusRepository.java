@@ -12,7 +12,7 @@ public class BusRepository {
     private List<Bus> buses;
 
     public BusRepository() {
-            Bus b1 = new BusGrande("B1","Bolivariano",15);
+            Bus b1 = new BusGrande("B1","Bolivariano",10);
             Bus b2 = new BusGrande("B2","Flota Occidental",8);
             Bus b3 = new BusGrande("B3","Velotax",8);
         buses = new ArrayList<>(List.of(b1,b2,b3));

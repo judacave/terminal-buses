@@ -9,13 +9,13 @@ public abstract class Bus {
     private String empresa;
     private int capacidad;
 
-    private List<Pasajero> pasajeros;
+//    private List<Pasajero> pasajeros;
 
     public Bus(String placa, String empresa, int capacidad) {
         this.placa = placa;
         this.empresa = empresa;
         this.capacidad = capacidad;
-        this.pasajeros = new ArrayList<>();
+//        this.pasajeros = new ArrayList<>();
     }
 
     public Bus() {
@@ -45,13 +45,13 @@ public abstract class Bus {
         this.capacidad = capacidad;
     }
 
-    public List<Pasajero> getPasajeros() {
-        return pasajeros;
-    }
+//    public List<Pasajero> getPasajeros() {
+//        return pasajeros;
+//    }
 
-    public void setPasajeros(List<Pasajero> pasajeros) {
-        this.pasajeros = pasajeros;
-    }
+//    public void setPasajeros(List<Pasajero> pasajeros) {
+//        this.pasajeros = pasajeros;
+//    }
 
     public abstract void definirVelocidad();
 
